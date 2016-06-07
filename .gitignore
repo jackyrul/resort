@@ -1,6 +1,8 @@
 .htaccess
 *.json
-.idea/
+.idea
+.idea/*
+
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
