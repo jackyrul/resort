@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html ng-app="Resort">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Font awesome -->
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Bootstrap and Fonts -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <!-- Main Inspinia CSS files -->
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="/css/plugins/uiTree/angular-ui-tree.min.css" rel="stylesheet">
+    <link href="/css/plugins/uiGrid/ui-grid-stable.css" rel="stylesheet" />
+    <link href="/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="/css/plugins/xeditable/xeditable.css" rel="stylesheet" />
+    <link href="/css/plugins/chosen/chosen.css" rel="stylesheet" />
+
+    <!-- SF -->
+    <link href="/css/plugins/sf/css/web/ej.widgets.core.min.css" rel="stylesheet" />
+    <link href="/css/plugins/sf/css/web/responsive-css/ej.responsive.css" rel="stylesheet" />
+    <link href="/css/plugins/sf/css/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
+    <link href="/css/plugins/sf/css/web/default-theme/ej.widgets.all.min.css" rel="stylesheet" />
+
+    <link id="loadBefore" href="/css/style.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet" />
+
+
+</head>
+
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+<body class="skin-1 mini-navbar" ng-controller="MainCtrl as main">
+
+    <!-- Main view  -->
+    @RenderBody()
+
+    <!-- jQuery and Bootstrap -->
+    <script src="/js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="/js/plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/plugins/d3/d3.js"></script>
+    <!-- MetsiMenu -->
+    <script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- SlimScroll -->
+    <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Peace js -->
+    <script src="/js/plugins/pace/pace.min.js"></script>
+    <script src="/js/plugins/peity/jquery.peity.min.js"></script>
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="/app/inspinia.js"></script>
+
+    <!-- SF -->
+
+    <!--<script src="/js/plugins/flot/jquery.flot.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="/js/plugins/flot/curvedLines.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="/js/plugins/flot/jquery.flot.time.js"></script>-->
+
+    <!-- Main Angular scripts-->
+    <script src="/js/angular/angular.min.js"></script>
+    <script src="/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="/js/angular/ngStorage.min.js"></script>
+    <script src="/js/angular/angular-route.js"></script>
+    <script src="/js/ui-router/angular-ui-router.min.js"></script>
+    <!--<script src="/js/angular/adal.js"></script>
+    <script src="/js/angular/adal-angular.js"></script>-->
+    <script src="/js/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!--<script src="/js/plugins/uiTree/angular-ui-tree.min.js"></script>
+    <script src="/js/plugins/xeditable/xeditable.min.js"></script>
+    <script src="/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="/js/plugins/dataTables/angular-datatables.min.js"></script>
+    <script src="/js/plugins/uiGrid/ui-grid-stable.js"></script>
+    <script src="/js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="/js/plugins/chosen/chosen.js"></script>
+    <script src="/js/plugins/flot/angular-flot.js"></script>-->
+
+    <!--@*
+    <script src="/css/plugins/sf/scripts/common/ej.widget.angular.min.js"></script>
+    <script src="/css/plugins/sf/scripts/properties.js"></script>*@
+
+    <script src="/js/plugins/chartJs/angles.js"></script>
+    @*
+    <script src="/js/plugins/peity/angular-peity.js"></script>*@
+
+    <script src="/js/angular/toastr.min.js"></script>
+    <script src="/js/angular/moment.js"></script>
+    <script src="/js/angular/spin.js"></script>
+
+    <script src="/js/plugins/iCheck/icheck.min.js"></script>-->
+
+
+    <!-- Anglar App Script -->
+    <script src="/app/app.js"></script>
+    <script src="/app/config.js"></script>
+    @*
+    <script src="/app/config.exceptionHandler.js"></script>*@
+    <script src="/app/config.route.js"></script>
+
+
+    <!-- common Modules -->
+    <script src="/app/common/common.js"></script>
+    <script src="/app/common/logger.js"></script>
+    <script src="/app/common/spinner.js"></script>
+
+    <!-- common Service -->
+    <script src="/app/services/dataprovider.js"></script>
+    <script src="/app/services/datacontext.js"></script>
+
+    <script src="/app/directives.js"></script>
+    <script src="/app/controllers.js"></script>
+    <script src="/app/views/dashboard/dashboard.js"></script>
+    <script src="/app/views/widgets/widgets.js"></script>
+    <script src="/app/views/gant/gant.js"></script>
+    <script src="/app/views/createbuild/createbuild.js"></script>
+    <script src="/app/views/createbuild/layout.js"></script>
+    <script src="/app/views/createbuild/naming.js"></script>
+    <script src="/app/views/createbuild/sequence.js"></script>
+
+    <script src="/app/views/charts/charts.js"></script>
+    <script src="/app/views/common/shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<div ng-controller="photo as vm">
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Фото</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+<section id="portfolio">
+<div class="container">
+<div class="row">
+<ul class="portfolio-filter text-center">
+    <li><a class="btn btn-default" ng-class="{'active': group==''}" href="#" ng-click="changeGroup('')" data-filter="*">Все</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='vip'}" href="#" ng-model="group" ng-click="changeGroup('vip')" data-filter=".folio">Vip</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='luxe'}" href="#" data-filter=".logos" ng-click="changeGroup('luxe')">Люкс</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='economy'}" href="#" data-filter=".mobile" ng-click="changeGroup('economy')">Эконом</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='courtyard'}" href="#" data-filter=".mobile" ng-click="changeGroup('courtyard')">Двор</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='beaches'}" href="#" data-filter=".mobile" ng-click="changeGroup('beaches')">Пляжи</a></li>
+    <li><a class="btn btn-default" ng-class="{'active': group=='berdiansk'}" href="#" data-filter=".mobile" ng-click="changeGroup('berdiansk')">Бердянск</a></li>
+</ul><!--/#portfolio-filter-->
+
+<div class="portfolio-items">
+    <!--<div masonry masonry-options="{ transitionDuration: '0.4s',  gutter: 20 }">-->
+        <!--<div class="masonry-brick" ng-repeat="photo in photospaging | pagination:(photosPage-1)*12 | limitTo:12 | filter: {group: group}" >-->
+
+        <div>
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-2 colmdoffset"  ng-repeat="photo in photospaging | pagination:(photosPage-1)*12 | limitTo:12 | filter: {group: group}" >
+            <div class="portfolio-item branded logos" width="260">
+                <div class="portfolio-wrapper">
+                    <div class="portfolio-single">
+                        <div class="portfolio-thumb">
+                            <img ng-src="{{ photo.src }}" class="img-responsive" width="260" alt="">
+                        </div>
+                        <div class="portfolio-view">
+                            <ul class="nav nav-pills">
+                                <li><a href="{{ photo.src }}" data-lightbox="example-set"><i style="margin-top: 10px;" class="fa fa-eye fa-4x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="portfolio-info ">
+                        <h2>{{ photo.name }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+    <uib-pagination class="text-center" total-items="photospaging.length" ng-model="photosPage" max-size="maxSize" class="portfolio-pagination" boundary-links="true" num-pages="numPages"></uib-pagination>
+
+</div>
+</section>
+<!--/#portfolio-->
+</div>
+

@@ -1,0 +1,20 @@
+﻿<div data-cc-sidebar data-ng-controller="sidebar as vm">
+    <div class="sidebar-filler"></div>
+    <div class="sidebar-dropdown"><a href="#">Menu</a></div>
+    <div class="sidebar-inner">
+        <ul class="navi">
+            <li class="nlightblue fade-selection-animation" ng-class="{current:$state.includes('{{r.name}}'), open:$state.includes('{{r.name}}')}" data-ng-repeat="r in vm.navRoutes">
+                <a data-ng-if="!r.children" nav-element-single ui-sref="{{r.name}}" data-ng-bind-html="r.settings.content"></a>
+                <a data-ng-if="r.children" nav-element data-ng-bind-html="r.settings.content"></a>
+                <ul data-ng-if="r.children">
+                    <li ng-class="{active:$state.includes('{{sub.name}}')}" data-ng-repeat="sub in r.children"><a ui-sref="{{sub.name}}" data-ng-bind="sub.navname"></a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--<div class="sidebar-widget">
+            <div class="sidebar-widget" data-ng-init="vm.init()">
+                <div id="todaydate"></div>
+            </div>
+        </div>-->
+    </div>
+</div>

@@ -1,0 +1,114 @@
+﻿<div ng-controller="aboutus">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>
+                    <img class="img-responsive center-block" src="{{main.about.mainimg}}">
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <section id="clients">
+        <div class="container">
+            <div class="row">
+                <h1 class="title text-center wow fadeInDown" >О нас</h1>
+                <br />
+                <div class="{{$parent.columns}}">
+                    <div class="clients text-center wow fadeInUp main" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="{{main.about.textimg}}" class="img-responsive screenshot" alt="">
+                        <p data-ng-repeat="par in main.about.maintext track by $index" data-ng-if="par.length>0">
+                            {{par}}
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-5" data-ng-if="$parent.main.overall.showSale">
+                    <div class="sidebar blog-sidebar">
+                        <div class="sidebar-item  recent">
+                            <h2 class="text-center">Ации</h2>
+                            <div class="media" ng-repeat="sale in $parent.sale" data-ng-if="sale.length>0">
+                                <div class="pull-left">
+                                    <a href="#"><img width="52" src="images/sale.jpg" alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4><a href="#">{{sale}}</a></h4>
+                                    <!--<p>March 2016</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#clients-->
+
+
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Почему стоит выбрать нас?</h1>
+                    <br/>
+                    <slick infinite=true slides-to-show='{{count}}' arrows="false" slides-to-scroll=1 autoplay=true centerMode="true" speed="1000">
+                        <div class="col-sm-3 col-xs-6 col-md-4">
+                            <div class="benefits">
+                                <i class="fa fa-money fa-8x" style="color: yellowgreen;"></i>
+                                <!--<img src="images/aboutus/2.jpg" class="img-responsive" alt="">-->
+                            </div>
+
+                            <div class="person-info">
+                                <h2>Умеренные цены</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-md-4">
+                            <div class="benefits">
+                                <i class="fa fa-map-marker fa-8x distance" style="color: red;"></i>
+                                <!--<img src="images/aboutus/2.jpg" class="img-responsive" alt="">-->
+                            </div>
+
+                            <div class="person-info">
+                                <h2>150 метров до моря</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-md-4">
+                            <div class="benefits">
+                                <i class="fa fa-users fa-8x" style="color: orange;"></i>
+                                <!--<img src="images/aboutus/2.jpg" class="img-responsive" alt="">-->
+                            </div>
+
+                            <div class="person-info">
+                                <!--<h2 class="pers">Внимательный</h2>-->
+                                <h2 class="">Внимательный и вежливый персонал</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-md-4">
+                            <div class="benefits">
+                                <i class="fa fa-check fa-8x"></i>
+                                <!--<img src="images/aboutus/2.jpg" class="img-responsive" alt="">-->
+                            </div>
+
+                            <div class="person-info">
+                                <h2>Чистота и уют</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-xs-6 col-md-4">
+                            <div class="benefits">
+                                <i class="fa fa-camera fa-8x" style="color: royalblue;"></i>
+                                <!--<img src="images/aboutus/2.jpg" class="img-responsive" alt="">-->
+                            </div>
+
+                            <div class="person-info">
+                                <h2>Культурный досуг</h2>
+                            </div>
+                        </div>
+                    </slick>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
