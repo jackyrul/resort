@@ -21,13 +21,17 @@
                                     <input type="text"  ng-model="item.link" placeholder="введите  ссылку на сайт" class="form-control  m-b">
 
                                 </div>
+                                <div class="col-lg-12 ">
+                                    <label class="col-lg-2 control-label" style="padding-right: 24px;">Текст</label>
+                                    <!--margin-left: -10px;padding-right: 24px; */-->
+                                    <div class="col-lg-10">
+                                         <textarea id="TextArea" style="margin-left: -10px;width: 80%;height:auto;-webkit-transition: height 2s ease;-moz-transition: height 2s ease;-ms-transition: height 2s ease;-o-transition: height 2s ease;
+                                transition: height 2s ease;" ng-keyup="autoExpand($event)" ng-model="item.text"></textarea>
+                                        <!--<input type="text"  ng-model="item.text" placeholder="введите  текст" class="form-control  m-b">-->
 
-                                <label class="col-lg-2 control-label">Текст</label>
-
-                                <div class="col-lg-4">
-                                    <input type="text"  ng-model="item.text" placeholder="введите  текст" class="form-control  m-b">
-
+                                    </div>
                                 </div>
+
 
                                 <label class="col-lg-2 control-label">Удалить элемент</label>
 

@@ -59,7 +59,8 @@
                                 <svg data-ng-show="issupportsvg" class="svg-sun" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
                                     <circle cx="50" cy="50" r="15" id="sun"></circle>
                                 </svg>
-                                <img class="sun-img" data-ng-hide="issupportsvg" src="images/sun.png">
+                                <!--data-ng-if="!issupportsvg"-->
+                                <img class="sun-img" style="display: none;{{style}}" src="images/sun.png">
                             </div>
                             <!--<img class="log" src="images/logo.png" alt="logo">-->
 

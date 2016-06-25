@@ -26,8 +26,8 @@
                 <div class="col-md-3 col-sm-5" data-ng-if="$parent.main.overall.showSale">
                     <div class="sidebar blog-sidebar">
                         <div class="sidebar-item  recent">
-                            <h2 class="text-center">Ации</h2>
-                            <div class="media" ng-repeat="sale in $parent.sale" data-ng-if="sale.length>0">
+                            <h2 class="text-center red">Акции</h2>
+                            <div class="media" ng-repeat="sale in $parent.sale track by $index" data-ng-if="sale.length>0">
                                 <div class="pull-left">
                                     <a href="#"><img width="52" src="images/sale.jpg" alt=""></a>
                                 </div>

@@ -1602,6 +1602,7 @@ Blog Default
 
 .post-content {
     padding: 20px 0;
+    text-align: center;
 }
 
 .timeline-date .btn-common {
@@ -1650,7 +1651,9 @@ Blog Default
     }
 
 .post-content .post-author {
-    margin-top: 0;
+    /*margin-top: 0;*/
+    margin: 20px;
+    font-size: 26px;
 }
 
     .post-content .post-author a {
@@ -2122,8 +2125,8 @@ span.stButton_gradient,
     padding: 12px 18px;
     background-color: #f7f7f7;
     margin-bottom: 5px;
-    color: #696969;
-    font-size: 16px;
+    color: #000000;
+    font-size: 18px;
 }
 
     .single-price ul li span,
@@ -2903,6 +2906,15 @@ span.stButton_gradient,
 }
 
 
+.red{
+    color: #EE3537;
+    font-weight: 400;
+}
+
+
+.post-thumb img{
+    margin: 0 auto;
+}
  /*.ng-enter,*/
  /*.ng-leave*/
 /*{*/

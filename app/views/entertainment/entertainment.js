@@ -16,7 +16,10 @@
 
             for(var i = 0; i < $scope.main.entertainment.length; i++){
                 $scope.main.entertainment[i].src = $scope.main.entertainment[i].src.replace('https://www.dropbox.com/', 'https://dl.dropboxusercontent.com/');
+                if($scope.main.entertainment[i].text)
+                $scope.main.entertainment[i].text = $scope.main.entertainment[i].text.split(/\n/);
             }
+
             $scope.$storage = $localStorage.$default({
                 main: $scope.main
             });

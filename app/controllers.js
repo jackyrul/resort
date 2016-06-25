@@ -2,12 +2,23 @@
     'use strict';
     var controllerId = 'MainCtrl';
 
-    function MainCtrl(common, $scope, datacontext) {
+    function MainCtrl(common, $scope, datacontext, $rootScope) {
         var getLogFn = common.logger.getLogFn;
+
         var log = getLogFn(controllerId);
         var id = 'common';
         var vm = this;
         //vm.title = 'Admin';
+        //$rootScope.issupportsvg = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0");
+        //if($rootScope.issupportsvg){
+        //    $rootScope.style = "display:none"
+        //}
+        $scope.$watch('$rootScope.issupportsvg', function() {
+            if($rootScope.issupportsvg != true)
+            $rootScope.style = "display: inherit"
+        }, true);
+
+
         $scope.date = new Date();
         datacontext.getData(id).then(function (data) {
             $scope.main = JSON.parse(data.data);
@@ -51,7 +62,7 @@
         //}
     }
     angular.module('Resort')
-        .controller(controllerId, ['common', '$scope', 'datacontext', MainCtrl])
+        .controller(controllerId, ['common', '$scope', 'datacontext','$rootScope', MainCtrl])
         .controller('footerCtrl', ['common', '$scope', 'datacontext', footerCtrl]);
 })();
 
